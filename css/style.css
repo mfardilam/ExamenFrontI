@@ -74,7 +74,7 @@ main{
     padding: 0 8vw;
 }
 section{
-    height: 75vh;
+    height: 85vh;
     margin-bottom: 3%;
 }
 h2{
@@ -190,6 +190,14 @@ span{
 .texto-difer h4{
     margin-bottom: 0.5rem;
 }
+.fondo-numero{
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+}
+.texto-mobile{
+    visibility: hidden;
+}
 
 /*Tercera seccion--------------------*/
 .testimonios{
@@ -228,7 +236,6 @@ span{
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    height: 30%;
     width: 100%;
 }
 
@@ -353,6 +360,10 @@ span{
     font-size: 0.6rem;
 }
 
+.derechos-mobile h6{
+    font-size: 0px;
+}
+
 /*Media queries----------------------------------*/
 @media (max-width:480px){
     /*Header------------------------------------*/
@@ -429,18 +440,24 @@ span{
         margin-bottom: 10%;
     }
     .fondo-numero{
+        width: 100%;
         background-color: rgba(139, 72, 191, 0.3);
+        flex-direction: row;
+        align-items: center;
         border-radius: 3rem 0 0 3rem;
     }
     .texto-difer{
         width: 100%;
     }
-    .texto-difer h4{
-        position: relative;
-        bottom: 32px;
-
+    .texto-web{
+        visibility: hidden;
     }
-
+    .texto-mobile{
+        visibility: visible;
+        width: 100%;
+        text-align: center;
+    }
+    
     /*Tercera seccion*/
     .testimonios-div-1, .testimonios-div-3{
         width: 0%;
@@ -464,14 +481,14 @@ span{
     }  
     .container-footer{
         flex-direction: column;
-        height: 60vh;
+        height: 80vh;
     }
     .logos{
         width: 100%;
-        height: 25%;
+        height: 20%;
+        margin: 5% 0;
         align-items: center;
         order: 1;
-        margin-bottom: 15%;
     }
     .logoF{
         width: 30%;
@@ -484,22 +501,29 @@ span{
 
     .listas{
         width: 100%;
-        height: 40%;
-        margin-top: 20%;
+        height: 50%;
     }
     .footer-form{
         width: 100%;
-        height: 10%;
-    }
-    .form{
-        position: relative;
-        bottom: 14rem;
+        height: 20%;
+        order: -1;
     }
     .derechos{
-        justify-content: center;
-        position: relative;
-        top: 4.5rem;
+        height: 0%;
     }
-
-
+    .derechos h6{
+        font-size: 0px;
+    }
+    .derechos-mobile{
+        padding-bottom: 6%;
+        background-color: #1E1E26;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .derechos-mobile h6{
+        color: #8C8C94;
+        font-size: 0.6rem;
+        text-align: center;
+    }
 }
