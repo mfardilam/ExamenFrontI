@@ -1,57 +1,69 @@
 @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;400;700&display=swap');
 *{
-    margin: 0;
     box-sizing: border-box;
     font-family: 'Be Vietnam Pro', sans-serif;
+    margin: 0;
+}
+:root{
+    --morado:#8B48BF;
 }
 
-
 /*Header-----------------------------------------------------------------------*/
+#titulo{
+    visibility: hidden;
+    width: 0;
+}
 header{
-    height: 15vh;
-    width: 100%;
-    display: flex;
     align-items: center;
+    display: flex;
+    height: 15vh;
     justify-content: space-between;
     padding: 0 0 0 8vw;
+    width: auto;
 }
 
 header div{
-    display: flex;
     align-items: center;
+    display: flex;
 }
 .menu{
+    align-items: center;
     display: flex;
     list-style: none;
-    align-items: center;
 }
 
 .menu li{
-    margin: 0 1.5rem;
     font-size: 0.8rem;
+    margin: 0 1.5rem;
 }
 
 .menu li a{
-    text-decoration: none;
     color: #242E52;
+    text-decoration: none;
+}
+
+/*Usando pseudoselectores y keyframes*/
+.menu li:nth-child(3){
+    animation: colores 10s infinite;
+    border-radius: 10%;
 }
 
 .logo{
-    width: 12%;
-    height: 90%;
-    display: flex;
     align-items: center;
+    display: flex;
+    height: 90%;
     justify-content: flex-end;
+    width: 12%;
 }
 .empezar{
-    background-color: #8B48BF;
-    width: 100%;
-    height: 50%;
+    background-color: var(--morado);
     border: none;
     border-radius: 60px;
     box-shadow: 0 0.2rem 0.4rem rgba(85, 85, 85, 0.466);
     color: white;
     font-size: 12px;
+    height: 50%;
+    width: 100%;
 }
 
 .menuMobile img{
@@ -59,7 +71,7 @@ header div{
 }
 
 
-/*Uso de pseudoselectores*/
+/*Uso de pseudoclases*/
 a:hover,
 button:hover{
     cursor: pointer;
@@ -81,28 +93,28 @@ h2{
     font-weight: 700;
 }
 p{
-    line-height: 1.5rem;
-    font-weight: 400;
     font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
 }
 
 span{
-    line-height: 1.8rem;
     color: #B3B2B7;
     font-size: 0.9rem;
+    line-height: 1.8rem;
 }
 
 /*Primera seccion--------------------*/
 .datos-iniciales{
-    display: flex;
     align-items: center;
+    display: flex;
 }
 .estadisticas, 
 .descripcion{
-    height: 90%;
-    width: 50%;
     display: flex;
+    height: 90%;
     margin-top: 2rem;
+    width: 50%;
 }
 
 .descripcion{
@@ -124,18 +136,20 @@ span{
 }
 
 .boton{
-    display: flex;
     align-items: flex-start;
+    display: flex;
     height: 100%;
 }
 .empezar-1{
-    background-color: #8B48BF;
-    width: 150px;
-    height: 50px;
+
+    animation: movimiento 4s infinite;
+    background-color: var(--morado);
     border: none;
     border-radius: 60px;
     color: white;
     font-size: 12px;
+    height: 50px;
+    width: 150px;
 }
 
 .estadisticas{
@@ -148,8 +162,8 @@ span{
 /*Segunda seccion--------------------*/
 .diferencias, 
 .testimonios-div-1, .testimonios-div-2, .testimonios-div-3{
-    display: flex;
     align-items: center;
+    display: flex;
     justify-content: center;
 }
 
@@ -169,22 +183,22 @@ span{
     margin-bottom: 1.5rem;
 }
 .numero{
-    background-color: #8B48BF;
-    color:white;
-    font-weight: bold;
-    width: 4.4rem;
-    height: 2.8rem;
-    display: flex;
     align-items: center;
-    justify-content: center;
+    background-color: var(--morado);
     border-radius: 3rem;
+    color:white;
+    display: flex;
+    font-weight: bold;
+    height: 2.8rem;
+    justify-content: center;
+    width: 4.4rem;
 }
 
 .texto-difer{
-    width: 70%;
     display: flex;
     flex-direction: column;
     margin-bottom: 1rem;
+    width: 70%;
 }
 
 .texto-difer h4{
@@ -201,8 +215,8 @@ span{
 
 /*Tercera seccion--------------------*/
 .testimonios{
-    display: flex;
     align-items: baseline;
+    display: flex;
 }
 
 .testimonios-container h2{
@@ -214,28 +228,28 @@ span{
 }
 
 .tarjetas{
+    align-items: center;
     background-color: #FAFAFA;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    text-align: center;
     height: 15rem;
+    justify-content: flex-end;
     padding: 0 8% 8% 8%;
+    text-align: center;
 }
 .tarjetas h3{
     margin-bottom: 5%;
 }
 
 .avatar{
-    width: 25%;
     position: relative;
     top: 1rem;
+    width: 25%;
 }
 .boton-2{
+    align-items: flex-start;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
     width: 100%;
 }
 
@@ -244,69 +258,69 @@ span{
 /*Seccion get-started---------------*/
 
 .get-started{
-    background-color: #8B48BF;
-    height: 30vh;
-    margin: 0;
+    align-items: center;
+    background-color:var(--morado);
     color: white;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 8vw;
     font-size: 1.5rem;
+    height: 30vh;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0 8vw;
 }
 .get-started h2{
     width: 40%;
 }
 
 .boton-footer{
-    width: 20%;
-    height: 50%;
-    display: flex;
     align-items: center;
+    display: flex;
+    height: 50%;
     justify-content: flex-end;
+    width: 20%;
 }
 .empezar-2{
     background-color:white ;
-    width: 150px;
-    height: 50px;
     border: none;
     border-radius: 2rem;
     box-shadow: 0 0.2rem 0.4rem rgba(85, 85, 85, 0.466);
-    color: #8B48BF;
+    color: var(--morado);
     font-size: 0.7rem;
+    height: 50px;
+    width: 150px;
     
 }
 
 
 /*Container footer-------------------*/
 .container-footer{
-    height: 30vh;
+    align-items: center;
     background-color: #1E1E26;
     display: flex;
-    align-items: center;
+    height: 30vh;
     justify-content: space-between;
     padding: 2% 8vw;
 }
 .logos,
 .footer-form,
 .footer-list, .listas{
-    height: 70%;
     display: flex;
+    height: 70%;
 }
 .redesSociales{
-    width: 100%;
     display: flex;
     justify-content: space-around;
+    width: 100%;
 }
 
 .listas{
-    width: 30%;
     align-items: center;
     justify-content: space-between;
+    width: 30%;
 }
 .footer-list li a{
-    text-decoration: none;
     color: white;
+    text-decoration: none;
 }
 
 .logos,
@@ -316,16 +330,20 @@ span{
 }
 
 .footer-list{
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
 
 .footer-list ul{
     color: white;
-    list-style: none;
-    line-height: 2rem;
     font-size: 0.9rem;
     font-weight: 100;
+    line-height: 2rem;
+    list-style: none;
+}
+.footer-list li:nth-child(2){
+    animation: colores 10s infinite;
+    border-radius: 10%;
 }
 
 .footer-form{
@@ -334,10 +352,10 @@ span{
 .footer-form input,
 .footer-form button
 {
-    height: 6vh;
+    border: none;
     border-radius: 2rem;
     font-size: 0.7rem;
-    border: none;
+    height: 6vh;
 }
 
 .footer-form input{
@@ -345,10 +363,10 @@ span{
 }
 
 .footer-form button{
-    width: 25%;
-    margin-left: 2%;
+    background-color: var(--morado);
     color: white;
-    background-color: #8B48BF;
+    margin-left: 2%;
+    width: 25%;
 }
 
 .derechos{
@@ -364,6 +382,18 @@ span{
     font-size: 0px;
 }
 
+/*Animación--------------------------------------*/
+@keyframes colores {
+    0%{background-color: var(--morado); opacity: 70%;}
+    25%{background-color: #5a2e7c96;}
+    50%{background-color: rgba(15, 104, 42, 0.555); text-decoration:underline;}
+    75%{background-color: rgba(35, 136, 102, 0.663);}
+}
+@keyframes movimiento {
+    50%{transform: translateX(-20px);}
+    100%{transform: translateX(20px);}
+    
+}
 /*Media queries----------------------------------*/
 @media (max-width:480px){
     /*Header------------------------------------*/
@@ -373,8 +403,8 @@ span{
 
     .menu,
     .logo{
+        max-width: 0;
         visibility: hidden;
-        width: 0;
     }
     .menuMobile img{
         visibility: visible;
@@ -396,8 +426,9 @@ span{
     }
     
     .descripcion p{
-        width: 100%;
+        margin-bottom: 5%;
         text-align: center;
+        width: 100%;
     }
     .datos-iniciales,
     .diferencias, 
@@ -407,13 +438,13 @@ span{
     }
     .estadisticas, 
     .descripcion{
-        width: 100%;
-        height: 50%;
         align-items: center;
+        height: 50%;
+        width: 100%;
     }
     .descripcion h2{
         font-size: 40px;
-        width: 80%;
+        max-width: 80%;
     }
     .estadisticas{
         order: -1;
@@ -436,15 +467,15 @@ span{
         padding-right:8vw;
     }
     .diferencias p{
-        width: 100%;
         margin-bottom: 10%;
+        width: 100%;
     }
     .fondo-numero{
-        width: 100%;
-        background-color: rgba(139, 72, 191, 0.3);
-        flex-direction: row;
         align-items: center;
+        background-color: rgba(139, 72, 191, 0.3);
         border-radius: 3rem 0 0 3rem;
+        flex-direction: row;
+        width: 100%;
     }
     .texto-difer{
         width: 100%;
@@ -453,60 +484,65 @@ span{
         visibility: hidden;
     }
     .texto-mobile{
+        text-align: center;
         visibility: visible;
         width: 100%;
-        text-align: center;
     }
     
     /*Tercera seccion*/
+    .testimonios-container{
+        padding-right:8vw;
+    }
+
     .testimonios-div-1, .testimonios-div-3{
-        width: 0%;
         visibility: hidden;
+        width: 0%;
     }
 
     /*Footer--------------------------------------*/
     .get-started{
         flex-direction: column;
+        height: 50vh;
         justify-content: center;
-        height: 45vh;
     }
     .get-started h2{
-        width: 80%;
+        margin-top: 5%;
         text-align: center;
+        width: 80%;
     }
     .boton-footer{
-        width: 80%;
         height: 40%;
         justify-content: center;
+        width: 80%;
     }  
     .container-footer{
         flex-direction: column;
-        height: 80vh;
+        height: 70vh;
+        justify-content: space-between;
     }
     .logos{
-        width: 100%;
-        height: 20%;
-        margin: 5% 0;
         align-items: center;
+        height: 30%;
+        margin-bottom: 5%;
         order: 1;
+        width: 100%;
     }
     .logoF{
         width: 30%;
     }
 
     .redesSociales{
-        width: 100%;
         order: -1;
+        width: 100%;
     }
 
     .listas{
         width: 100%;
-        height: 50%;
     }
     .footer-form{
-        width: 100%;
         height: 20%;
         order: -1;
+        width: 100%;
     }
     .derechos{
         height: 0%;
@@ -515,11 +551,11 @@ span{
         font-size: 0px;
     }
     .derechos-mobile{
-        padding-bottom: 6%;
+        align-items: center;
         background-color: #1E1E26;
         display: flex;
-        align-items: center;
         justify-content: center;
+        padding-bottom: 6%;
     }
     .derechos-mobile h6{
         color: #8C8C94;
